@@ -20,7 +20,6 @@ int main() {
   unsigned long long best = 0;
   unsigned int len = n.length();
   unsigned int span = 13;
-
  for (unsigned int start = 0; start <= len - span; start++) {
     unsigned long long current = 1;
     for (unsigned int i = 0; i < span; i++) {
