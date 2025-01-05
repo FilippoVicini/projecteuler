@@ -17,4 +17,24 @@ int main() {
       "589604080719840385096245544436298123098787992724428490918884580156166097"
       "919133875499200524063689912560717606058861164671094050775410022569831552"
       "0005593572972571636269561882670428252483600823257530420752963450";
+  unsigned long long best = 0;
+  unsigned int len = n.length();
+  unsigned int span = 13;
+
+ for (unsigned int start = 0; start <= len - span; start++) {
+    unsigned long long current = 1;
+    for (unsigned int i = 0; i < span; i++) {
+      current *= n[start + i] - '0';
+    }
+    if (current > best) {
+      best = current;
+    }
+  }
+ std::cout << best;
+
+
+
+
+
+
 }
